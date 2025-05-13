@@ -17,17 +17,29 @@ client.once('ready', () => {
     console.log(`🤖 Bot is online as ${client.user.tag}`);
 });
 
+// Convert the comma-separated lists into arrays
+const allowedGuildIds = process.env.ALLOWED_GUILD_IDS.split(",");
+const allowedChannelNames = process.env.ALLOWED_CHANNEL_NAMES.split(",");
+
 client.on('messageCreate', async (message) => {
     // Ignore messages from the bot itself
     if (message.author.bot) return;
+
+    // Check if the message is from an allowed server
+    if (!allowedGuildIds.includes(message.guild.id)) return;
+
+    // Check if the message is from an allowed channel
+    if (!allowedChannelNames.includes(message.channel.name)) return;
     
     const userId = message.author.id;
+    const userName = message.author.username;
     const userMessage = message.content;
     
     try {
         // Send the message to the AI bot server
         const response = await axios.post(`${process.env.AI_BOT_SERVER_URL}/api/chat/${userId}`, {
             message: userMessage,
+            userName: userName
         });
         
         // Get the AI bot response
