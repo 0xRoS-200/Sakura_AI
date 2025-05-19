@@ -85,6 +85,17 @@ This chatbot framework demonstrates advanced techniques applicable to:
 ## 🔧 Installation & Setup
 - Make sure you get the Gemini API key and Discord API key and Setup to .env
 
+-.env structure must be liek this.
+```bash
+MONGO_URI = your mongo API key
+GEMINI_API_URL = your Gemini API URL
+GEMINI_API_KEY = your Gemini API key
+DISCORD_BOT_TOKEN = your Discord bot Token
+AI_BOT_SERVER_URL = your AI bot server URL
+PORT = 3000
+ALLOWED_GUILD_IDS = Discord Guild (server) IDs ,more than one can be added by seperating commas
+ALLOWED_CHANNEL_NAMES = Discord Channel (channel) IDs ,more than one can be added by seperating commas
+```
 ```bash
 # Clone the repository
 git clone https://github.com/0xRoS-200/sakura-ai.git
