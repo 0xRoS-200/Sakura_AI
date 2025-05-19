@@ -83,6 +83,7 @@ This chatbot framework demonstrates advanced techniques applicable to:
 - Personalized social companions
 
 ## 🔧 Installation & Setup
+- Make sure you get the Gemini API key and Discord API key and Setup to .env
 
 ```bash
 # Clone the repository
