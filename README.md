@@ -85,7 +85,7 @@ This chatbot framework demonstrates advanced techniques applicable to:
 ## 🔧 Installation & Setup
 - Make sure you get the Gemini API key and Discord API key and Setup to .env
 
--.env structure must be liek this.
+- .env structure must be like this.
 ```bash
 MONGO_URI = your mongo API key
 GEMINI_API_URL = your Gemini API URL
