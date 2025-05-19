@@ -86,7 +86,7 @@ This chatbot framework demonstrates advanced techniques applicable to:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/sakura-ai.git
+git clone https://github.com/0xRoS-200/sakura-ai.git
 
 # Install dependencies
 cd sakura-ai
