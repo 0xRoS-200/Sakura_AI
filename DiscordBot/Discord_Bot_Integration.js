@@ -23,7 +23,7 @@ const allowedChannelNames = process.env.ALLOWED_CHANNEL_NAMES.split(",");
 
 client.on('messageCreate', async (message) => {
     // Ignore messages from the bot itself
-    if (message.author.bot) return;
+    if (message.author.id == 1371527399749189723) return;
 
     // Check if the message is from an allowed server
     if (!allowedGuildIds.includes(message.guild.id)) return;

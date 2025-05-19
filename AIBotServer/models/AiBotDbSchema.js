@@ -27,5 +27,6 @@ const userContextSchema = new mongoose.Schema({
 
 const UserContext = mongoose.model("UserContext", userContextSchema)
 const GlobalContext = mongoose.model("GlobalContext", globalContextSchema)
+mongoose.set('strictQuery', true);
 
 export {UserContext, GlobalContext}
